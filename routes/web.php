@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DonerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('donar', [DonerController::class, 'index']);
+Route::post('donar', [DonerController::class, 'store']);
+Route::post('donar/{show_by_method}', [DonerController::class, 'show_by_method']);
+
+

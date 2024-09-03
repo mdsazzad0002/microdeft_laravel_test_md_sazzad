@@ -12,7 +12,6 @@
 </head>
 <body>
 
-    
 
     <div class="row">
       <table class="table table-bordered table-hover table-striped">

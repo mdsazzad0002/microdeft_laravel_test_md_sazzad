@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use Database\payment_method_seeder;
+use Database\Seeders\payment_method_seeder;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;

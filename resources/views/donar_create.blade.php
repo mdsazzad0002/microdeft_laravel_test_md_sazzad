@@ -12,27 +12,43 @@
 </head>
 <body>
 
-    
 
     <div class="row">
-      <table class="table table-bordered table-hover table-striped">
-        @foreach ($doners as $donar)
-        <tr>
-            <td>
-                {{ $donar->name }}
-            </td>
-            <td>
-                {{ $donar->phone }}
-            </td>
-            <td>
-                {{ $donar->amount }}
-            </td>
-            <td>
-                {{ $donar->method_method->name }}
-            </td>
-        </tr>
-        @endforeach
-      </table>
+        <div class="col-md-offeset-2 my-auto">
+            <form action="" class="card" method="POST">
+                @csrf
+
+                <div class="card-header">
+                    Donar
+                </div>
+                <div class="card-body">
+                    <div class="mb-2">
+                        <input type="text" name="name" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" name="phone" class="form-control" placeholder="Phone">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" name="amount" class="form-control" placeholder="amount">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" name="address" class="form-control" placeholder="Address">
+                    </div>
+                    <div class="mb-2">
+                        <select name="payment_method_id" id="" class="form-control" required>
+                            <option value="">--Select Payment Method --</option>
+                            @foreach ($payment_mdthod as $method)
+                            <option value="{{ $method->id }}">{{ $method->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
 
